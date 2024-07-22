@@ -1,0 +1,19 @@
+61. Grid Sizing
+
+How to size columns and rows to conform to our design
+grid-template-rows and grid-template-columns: can be set to specific sizes
+these will be non-responsive
+sizes can be px & rem
+instead of grid-template-rows and grid-template-columns, you can use grid-template: define rows first / define columns after the forward slash
+another way to define size is to use auto  (eg. 100px <the first row> auto is the second column) The second column can be as wide or narrow as it needs to take up the full width of the screen
+using auto in rows means that it will fit content not the screen size.
+using auto in columns means it will fit the window, not the content
+fractional sizing (1fr 2fr)
+the fr (fractional unit) defines the size of the element(row or column) by a fraction
+(e.g. 1fr 2fr - means that the element will grow or shrink as needed with the first element being ⅓ of the window width or height and the second element being ⅔ of the width or height.
+responsive minmax
+eg. grid-template-columns: 200px minmax(400px, 800px)
+this means that the second column will go to a minimum of 400px and a max of 800px.
+how to do repeated fr by using the repeat function
+eg (grid-template-rows: repeat (8, 100px);
+grid-auto-rows: 300px controls styling no matter how many items in each div
